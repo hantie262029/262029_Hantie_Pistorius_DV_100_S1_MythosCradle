@@ -1,55 +1,70 @@
-body{
-    margin:0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
-h3{
+@font-face {
+    font-family: "titleFont";
+    src: url("../assets/fonts/mythology_of_egypt/Mythology\ Of\ Egypt.otf");
+}
+
+h1 {
+    font-family: "titleFont", sans-serif;
+    font-size: 96pt;
+}
+h2 {
+    font-weight: bolder;
+}
+h3 {
     text-transform: uppercase;
+    font-size: medium;
+    font-weight: bold;
 }
 
-.navbar{
+p {
+    font-size: 16pt;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: grey;
+    border-radius: 35px;
+    background-color: lightgray;
+    margin: 20px 40px;
 }
 
-.logo{
+.logo {
     display: flex;
     justify-content: left;
     width: 280px;
     display: block;
 }
 
-.navbar p{
-    color: #EEEEEE;
-}
-
-.navLinks{
+.navLinks {
     display: flex;
-    gap: 20px
+    gap: 20px;
 }
 
-.navLinks a{
+.navbar a {
     text-decoration: none;
-    color: #EEEEEE;
+    color: #4d4d4d;
 }
 
-.searchBar a{
-    text-decoration: none;
-    color: #EEEEEE;
+#actLink {
+    color: #15d5f5;
 }
 
-
-.hero{
+.hero {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 100px 10dvh;
+    padding: 100px 15dvh;
 
-    height: 90vh;
+    height: 95vh;
     text-align: center;
     background-image: url(../assets/img/homeHeader.png);
     background-size: cover;
@@ -57,90 +72,150 @@ h3{
     background-repeat: no-repeat;
 }
 
-.hero h1{
+.hero h1 {
     color: #e9ad1c;
 }
-.hero p{
-    color: #FFFFFF;
+.hero p {
+    font-family: "Metamorphous", sans-serif;
+    font-size: 24pt;
+    color: #ffffff;
 }
 
-.cardA{
+.homeCardA {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 90px 20dvh;
-    gap: 85px;
-    height: 80vh;
+    gap: 100px;
+    height: 100vh;
     background-color: #002d68;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.cardA h3{
+.homeCardA h3 {
     color: #e9ad1c;
 }
-
-.button01{
+.button01 {
     margin-top: 15px;
     padding: 25px 50px;
     cursor: pointer;
     border-radius: 15px;
     border: none;
-    color: #FFFFFF;
-    background-color: #15D5F5;
+    color: #ffffff;
+    background-color: #15d5f5;
     font-size: large;
 }
 
-.button01 a{
+.button01 a {
     text-decoration: none;
-    color: #EEEEEE;
+    color: #eeeeee;
     font-weight: bold;
 }
 
+.homeCardB {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 60px 10dvh;
+    gap: 50px;
+    height: 80vh;
+    background-color: #ffffff;
+    color: gray;
+}
+
+.homeCardB h2 {
+    color: #2f004f;
+}
+
+.homeCardB h3 {
+    color: #15d5f5;
+}
+
+.homeCardB img {
+    border-radius: 20px;
+}
+
+.homeCardC {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 40dvh;
+    height: 115vh;
+    background-color: #002d68;
+    color: #ffffff;
+}
+
+.homeCardC h3 {
+    color: #e9ad1c;
+}
+
+#pastLegendsCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+#pastLegendsCard img {
+    border-radius: 25px;
+}
+
 /* FOOTER */
-footer{
+footer {
     align-items: center;
     text-align: left;
 
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: gray;
     padding: 50px 90px;
 }
 
-.footerTop{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #EEEEEE;
-    padding: 20px ;
+footer h4 {
+    color: #000000;
+    font-size: large;
 }
 
-.footLinks{
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px;
+}
+
+.footLinks {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.footLinks a{
+.footLinks a {
     text-decoration: none;
     color: grey;
 }
 
-.socialLinks{
+.socialLinks {
     display: flex;
     gap: 10px;
     flex-direction: row;
 }
 
-.socialLogo{
+.socialLogo {
     width: 80px;
 }
 
-.footerBot{
+.footerBot {
     display: flex;
     justify-content: space-between;
     padding: 30px 0px;
 }
 
-.footerBot a{
+.footerRight {
+    display: flex;
+    gap: 20px;
+}
+
+.footerBot a {
     text-decoration: none;
     color: grey;
 }
