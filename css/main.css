@@ -66,12 +66,13 @@ header {
 }
 
 .search {
-    --padding: 14px;
     width: max-content;
+    height: 55%;
     display: flex;
     align-items: center;
-    padding: var(--padding);
-    border-radius: 20px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
     background: #ffffff;
     transition: box-shadow 0.25s;
 }
@@ -80,10 +81,21 @@ header {
     box-shadow: 0 0 5px rgba(77, 77, 77, 0.75);
 }
 
-.searchInput {
+.searchItem {
+    background-color: transparent;
+    border: none;
+}
+
+.bar {
+    border-right: solid #4d4d4d 2px;
+}
+.search button {
+    color: #4d4d4d;
+}
+/* .searchInput {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-    padding: 0px var(--padding);
+    padding: 0px 14px;
     background: transparent;
     border: none;
     outline: none;
@@ -93,24 +105,38 @@ header {
 .searchInput::placeholder,
 .searchIcon {
     color: rgba(0, 0, 0, 0.75);
-}
+} */
 
 /* Buttons */
-/* Light Blue Button */
-.buttonBlue {
+.buttonBase {
     margin-top: 15px;
     padding: 25px 50px;
     cursor: pointer;
     border-radius: 15px;
     border: none;
     color: #ffffff;
-    background-color: #15d5f5;
     font-size: large;
+    font-weight: 750;
 }
-.buttonBlue a {
+
+.buttonBase a {
     text-decoration: none;
     color: #eeeeee;
     font-weight: bold;
+}
+
+/* Light Blue Button */
+.buttonBlue {
+    background-color: #15d5f5;
+}
+
+/* Yellow Button */
+.buttonYellow {
+    background-color: #e9ad1c;
+}
+
+.buttonDark {
+    background-color: #002d68;
 }
 
 /* Hero card */
@@ -148,7 +174,14 @@ header {
     color: #15d5f5;
 }
 
-/* Homepage/Index */
+.cardYellow {
+    background-color: #e9ad1c;
+    color: #ffffff;
+}
+
+/*
+Homepage/Index
+*/
 /* Homepage Hero Card */
 .homeHero {
     background-image: url(../assets/img/homeHeader.png);
@@ -217,7 +250,9 @@ header {
     border-radius: 25px;
 }
 
-/* Contact Page */
+/*
+Contact Page
+*/
 .contactHero {
     background-image: url(../assets/img/contactHeader.png);
 }
@@ -255,12 +290,14 @@ header {
 .contactMap iframe {
     border-radius: 25px;
 }
+
+/* Contact Form styling */
 .contactForm,
 .contactForm h2 {
     color: #ffffff;
 }
 .contactForm form {
-    padding: 20px;
+    padding: 15px;
     padding-bottom: 35px;
     gap: 10px;
     /* background-color: #f4f4f4; */
@@ -283,9 +320,24 @@ header {
     border-radius: 8px;
     font-family: "Poppins";
 }
+
 .buttonContact {
     margin-left: 10px;
-    font-weight: 750;
+}
+
+/* About/Adopt Page */
+.aboutHero {
+    background-image: url(../assets/img/adoptHeader.png);
+}
+
+.cardAdoptTop {
+    padding: 50px;
+    text-align: center;
+}
+.cardAdoptTop h2 {
+    font-family: "Metamorphous", sans-serif;
+    line-height: 1.8;
+    color: #e9ad1c;
 }
 
 /* FOOTER */
