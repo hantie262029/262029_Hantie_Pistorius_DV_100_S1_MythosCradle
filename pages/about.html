@@ -1,35 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width-device-width, initial-scale-1.0">
-    <meta name="keywords" content="template, html, css, image, paragraph, setup">
-    <!-- Key words need to be updated with keywords for the website -->
-    <meta name="author" content="Hantie Pistorius 262029">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+        <meta
+            name="keywords"
+            content="mythos, cradle, pet, adoption, legend, dragon, pegasi, kitsune, basilisks, family, heartwarming, friends, bond, loving, creature, cute" />
+        <!-- Key words need to be updated with keywords for the website -->
+        <meta name="author" content="Hantie Pistorius 262029" />
 
-    <title>The Mythos Cradle - Adopt</title>
+        <title>The Mythos Cradle - Contact</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"
-    />
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-        crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/main.css">
-</head>
-<body>
+        <!-- Google Fonts, Poppins & Metamorphous -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet" />
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous">
-    </script>
-</body>
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous" />
+
+        <!-- VERY IMPORTANT: CSS Stylesheet linking -->
+        <link rel="stylesheet" href="../css/main.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
+                </div>
+
+                <div class="navLinks">
+                    <a href="../index.html">Home</a>
+                    <a id="actLink" href="#">Adopt</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="searchBar">
+                    <form>
+                        <div class="search">
+                            <button class="searchItem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input
+                                class="searchItem bar"
+                                type="search"
+                                name="search"
+                                id="search"
+                                placeholder="Search" />
+                            <button class="searchItem"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero aboutHero">
+            <h1>Adopt A Creature</h1>
+        </section>
+
+        <section class="cardBlue cardAdoptTop">
+            <h2>Your journey with a little legend begins here.</h2>
+            <p>
+                Adopting a little legend doesn’t cost a thing — our focus is finding loving homes. To make their arrival
+                extra special, you can choose optional starter packages made just for your creature: tiny beds, treats,
+                toys, and more. You can even get multiple packages if your legend will have indoor and outdoor spaces.
+                After you complete your application, we’ll arrange a magical meeting so you can see which creature is
+                the perfect fit. We’ve also included a beginners friendly rating with our creatures so that you can
+                gauge if you are ready to make them a part of your family.
+            </p>
+        </section>
+
+        <!-- Filter bar -->
+        <section class="cardYellow">
+            <div class="mainFilterBar">
+                <div class="filterLeft">
+                    <div class="filterBar">
+                        <button><i class="fa-solid fa-sliders"></i></button>
+                        <p>Filter</p>
+                        <button><i class="fa-solid fa-grip"></i></button>
+                    </div>
+                    <p>Showing 1-16 of 32 results</p>
+                </div>
+                <form class="sortForm">
+                    <label for="showQuant">Show</label>
+                    <input type="number" id="showQuant" name="showQuant" min="1" max="32" />
+                    <label for="sortType">Sort by</label>
+                    <select id="sortType" name="sortType">
+                        <option value="default">Default</option>
+                        <option value="random">Random</option>
+                    </select>
+                </form>
+            </div>
+        </section>
+
+        <!-- Adopt Cards -->
+        <section class="adoptCard cardWhite adoptAzuron">
+            <!-- <div class="adoptImg"> -->
+            <img src="../assets/img/adopt1.png" alt="Azuron Adopt Profile Image" />
+            <!-- </div> -->
+
+            <div class="adoptContent">
+                <h2>Blue Dragon – Azuron</h2>
+                <h3>R 2 500.00 <s>R 5 000.00</s></h3>
+                <div class="adoptRating">
+                    <div>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                    </div>
+                    <h5>Friendly Ally</h5>
+                </div>
+                <p class="adoptAboutPara">
+                    Azuron is a curious little dragon with a spark of mischief in his eyes. He loves exploring hidden
+                    nooks and curling up in warm spots after a playful flight, leaving tiny trails of blue sparks
+                    wherever he goes. He thrives on attention and gentle play, and his favorite games involve chasing
+                    floating spark orbs around the room
+                </p>
+
+                <!-- I'm assuming this button is also not correct -->
+
+                <div class="adoptButtonDiv">
+                    <button class="buttonBase buttonDark buttonCounter">
+                        <i class="fa-solid fa-minus"></i>
+                        &emsp; 1&emsp;
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="buttonBase buttonBlue">Add to Cradle</button>
+                </div>
+                <p class="adoptAddOns">
+                    <!--This is not how you do the tab spacing :) -->
+                    Bed : &emsp; Cozy lava-foam bed <br />
+                    Treats : &emsp; Frostberry treats <br />
+                    Toys : &emsp; Flame-safe balls, Wing-wrangling hoops, Tiny treasure chests <br />
+                    Unique Item : &emsp; Mini Fire Orb
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footerTop">
+                <div class="logo">
+                    <img src="../assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
+                    <p>Where every legendary creature finds a loving home.+</p>
+                </div>
+
+                <div class="footLinks">
+                    <h4>Company</h4>
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">Adopt</a>
+                    <a class="pageCurrent" href="#">Contact</a>
+                </div>
+
+                <div class="footSocials">
+                    <h4>Social Media Links</h4>
+                    <div class="socialLinks">
+                        <a href="https://www.facebook.com/theopenwindow"
+                            ><img src="../assets/img/sm1.png" alt="facebook" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.tiktok.com/@open_window_"
+                            ><img src="../assets/img/sm2.png" alt="tikTok" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.instagram.com/openwindowinstitute/"
+                            ><img src="../assets/img/sm3.png" alt="instagram" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.linkedin.com/school/openwindowinstitute/"
+                            ><img src="../assets/img/sm4.png" alt="x" style="width: 80px; height: 80px"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footerBot">
+                <div>
+                    <p>All Rights Reserved @ Open Window 2024</p>
+                </div>
+
+                <div class="footerRight">
+                    <a href="https://www.openwindow.co.za/">Terms & Conditions</a>
+                    <a href="https://www.openwindow.co.za/wp-content/uploads/2025/07/POPIA-2025.pdf"
+                        >Privacy & Policy</a
+                    >
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/95fa522762.js" crossorigin="anonymous"></script>
+    </body>
 </html>
