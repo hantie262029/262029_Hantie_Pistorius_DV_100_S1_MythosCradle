@@ -6,8 +6,7 @@
         <meta name="viewport" content="width-device-width, initial-scale-1.0" />
         <meta
             name="keywords"
-            content="template, html, css, image, paragraph, setup"
-        />
+            content="mythos, cradle, pet, adoption, legend, dragon, pegasi, kitsune, basilisks, family, heartwarming, friends, bond, loving, creature, cute" />
         <!-- Key words need to be updated with keywords for the website -->
         <meta name="author" content="Hantie Pistorius 262029" />
 
@@ -18,16 +17,21 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
+            rel="stylesheet" />
 
         <!-- Bootstrap -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-        />
+            crossorigin="anonymous" />
+
+        <!-- Google Search Icon -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+
+        <!-- VERY IMPORTANT: CSS Stylesheet linking -->
         <link rel="stylesheet" href="css/main.css" />
     </head>
 
@@ -35,11 +39,7 @@
         <header>
             <div class="navbar">
                 <div class="logo">
-                    <img
-                        src="assets/img/logo.png"
-                        alt="Mythos Cradle Logo"
-                        class="logo"
-                    />
+                    <img src="assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
                 </div>
 
                 <div class="navLinks">
@@ -49,142 +49,113 @@
                 </div>
 
                 <div class="searchBar">
-                    <a href="#">Search</a>
-                    <a href="#">Cart</a>
+                    <form>
+                        <div class="search">
+                            <span class="searchIcon material-symbols-outlined">search</span>
+                            <input class="searchInput" type="search" name="search" id="search" placeholder="Search" />
+                        </div>
+                    </form>
                 </div>
             </div>
         </header>
 
-        <section class="hero">
+        <section class="hero homeHero">
             <h1>The Mythos Cradle</h1>
             <p>Where legends become loved ones</p>
         </section>
 
-        <section class="homeCardA">
+        <section class="homeCardA cardBlue">
             <!-- Journey Card  -->
             <!-- The image slider will go here -->
             <div id="imgSlider">
-                <img
-                    src="assets/img/imageSlider1.png"
-                    alt="imageslider placeholder"
-                    class="imageSlider"
-                />
+                <img src="assets/img/imageSlider1.png" alt="imageslider placeholder" class="imageSlider" />
             </div>
             <div class="cardContent">
                 <h3>Begin your journey</h3>
                 <h2>Tiny Legends Big Hearts</h2>
                 <p>
-                    Begin your journey into legend: tiny dragons, shimmering
-                    pegasi, mischievous kitsune, and watchful basilisks are
-                    ready to meet their families. Delight in enchanted
-                    encounters, gentle care, and joyful playtime. Heartwarming
-                    bonds await as these legendary creatures find their forever
-                    homes.
+                    Begin your journey into legend: tiny dragons, shimmering pegasi, mischievous kitsune, and watchful
+                    basilisks are ready to meet their families. Delight in enchanted encounters, gentle care, and joyful
+                    playtime. Heartwarming bonds await as these legendary creatures find their forever homes.
                 </p>
-                <button class="button01">
+                <button class="buttonBlue">
                     <a href="pages/about.html">Cradle a Legend</a>
                 </button>
             </div>
         </section>
 
-        <section class="homeCardB">
+        <section class="homeCardB cardWhite">
             <!-- Sanctuary Card  -->
             <div class="cardContent">
                 <h3>The Cradle</h3>
                 <h2>A Sanctuary Where Mythical Creatures Find Families</h2>
                 <p>
-                    Discover our carefully nurtured mythical creatures, each
-                    ready to join a loving family. Experience the joy and wonder
-                    of forming a lasting bond, as every adoption is guided with
-                    care, ensuring a safe, ethical, and heartwarming journey for
-                    both creature and caretaker.
+                    Discover our carefully nurtured mythical creatures, each ready to join a loving family. Experience
+                    the joy and wonder of forming a lasting bond, as every adoption is guided with care, ensuring a
+                    safe, ethical, and heartwarming journey for both creature and caretaker.
                 </p>
             </div>
             <div>
-                <img
-                    src="assets/img/homeImg1.png"
-                    alt="Phoenix Profile Image"
-                />
+                <img src="assets/img/homeImg1.png" alt="Phoenix Profile Image" />
             </div>
         </section>
 
-        <section class="homeCardC">
+        <section class="homeCardC cardBlue">
             <!-- Cradle Card  -->
-            <div class="cardContent">
+            <div>
                 <h3>Looking in on past friends</h3>
                 <h2>From Cradle to Family: A Legend at Home</h2>
             </div>
-            <div id="pastLegendsCard">
+            <div class="pastLegendsCard">
                 <div>
                     <!-- Percy-->
-                    <img
-                        src="assets/img/successImg1.png"
-                        alt="Percy Profile Image"
-                        class="pastLegendProfile"
-                    />
+                    <img src="assets/img/successImg1.png" alt="Percy Profile Image" class="pastLegendProfile" />
                     <h4>Percy’s Quiet Winter Days</h4>
                     <p>
-                        Explore red deserts, ancient relics, Once shy in the
-                        cold, Percy now explores snowy peaks wrapped in warmth,
-                        curiosity, and family love.
+                        Explore red deserts, ancient relics, Once shy in the cold, Percy now explores snowy peaks
+                        wrapped in warmth, curiosity, and family love.
                     </p>
                 </div>
                 <div>
                     <!-- Ripple-->
-                    <img
-                        src="assets/img/successImg2.png"
-                        alt="Ripple Profile Image"
-                        class="pastLegendProfile"
-                    />
+                    <img src="assets/img/successImg2.png" alt="Ripple Profile Image" class="pastLegendProfile" />
                     <h4>Ripple’s Gentle River Home</h4>
                     <p>
-                        Gentle Ripple has found peace along flowing waters,
-                        bonded closely with a family who treasures calm and
-                        care.
+                        Gentle Ripple has found peace along flowing waters, bonded closely with a family who treasures
+                        calm and care.
                     </p>
                 </div>
                 <div>
                     <!-- Atlas-->
-                    <img
-                        src="assets/img/successImg3.png"
-                        alt="Atlas Profile Image"
-                        class="pastLegendProfile"
-                    />
+                    <img src="assets/img/successImg3.png" alt="Atlas Profile Image" class="pastLegendProfile" />
                     <h4>Atlas Learns to Trust</h4>
                     <p>
-                        Brave little Atlas grows stronger each day, learning
-                        trust and courage in a home filled with patience.
+                        Brave little Atlas grows stronger each day, learning trust and courage in a home filled with
+                        patience.
                     </p>
                 </div>
                 <div>
                     <!-- Skye-->
-                    <img
-                        src="assets/img/successImg4.png"
-                        alt="Skye Profile Image"
-                        class="pastLegendProfile"
-                    />
+                    <img src="assets/img/successImg4.png" alt="Skye Profile Image" class="pastLegendProfile" />
                     <h4>Skye’s First Open Skies</h4>
                     <p>
-                        Skye’s wings stretch freely at last, soaring happily
-                        above a home where wonder is always welcome.
+                        Skye’s wings stretch freely at last, soaring happily above a home where wonder is always
+                        welcome.
                     </p>
                 </div>
             </div>
             <div>
-                <button class="button01">
+                <button class="buttonBlue">
                     <a href="pages/about.html">Cradle a Legend</a>
                 </button>
             </div>
         </section>
 
+        <!-- Footer -->
         <footer>
             <div class="footerTop">
                 <div class="logo">
-                    <img
-                        src="assets/img/logo.png"
-                        alt="Mythos Cradle Logo"
-                        class="logo"
-                    />
+                    <img src="assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
                     <p>Where every legendary creature finds a loving home.+</p>
                 </div>
 
@@ -198,26 +169,21 @@
                 <div class="footSocials">
                     <h4>Social Media Links</h4>
                     <div class="socialLinks">
-                        <img
-                            src="assets/img/sm1.png"
-                            alt="facebook"
-                            class="socialLogo"
-                        />
-                        <img
-                            src="assets/img/sm2.png"
-                            alt="tikTok"
-                            class="socialLogo"
-                        />
-                        <img
-                            src="assets/img/sm3.png"
-                            alt="instagram"
-                            class="socialLogo"
-                        />
-                        <img
-                            src="assets/img/sm4.png"
-                            alt="x"
-                            class="socialLogo"
-                        />
+                        <a href="https://www.facebook.com/theopenwindow"
+                            ><img src="assets/img/sm1.png" alt="facebook" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.tiktok.com/@open_window_"
+                            ><img src="assets/img/sm2.png" alt="tikTok" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.instagram.com/openwindowinstitute/"
+                            ><img src="assets/img/sm3.png" alt="instagram" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.linkedin.com/school/openwindowinstitute/"
+                            ><img src="assets/img/sm4.png" alt="x" style="width: 80px; height: 80px"
+                        /></a>
                     </div>
                 </div>
             </div>
@@ -228,8 +194,10 @@
                 </div>
 
                 <div class="footerRight">
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy & Policy</a>
+                    <a href="https://www.openwindow.co.za/">Terms & Conditions</a>
+                    <a href="https://www.openwindow.co.za/wp-content/uploads/2025/07/POPIA-2025.pdf"
+                        >Privacy & Policy</a
+                    >
                 </div>
             </div>
         </footer>
@@ -238,7 +206,6 @@
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"
-        ></script>
+            crossorigin="anonymous"></script>
     </body>
 </html>

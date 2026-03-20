@@ -6,25 +6,32 @@
         <meta name="viewport" content="width-device-width, initial-scale-1.0" />
         <meta
             name="keywords"
-            content="template, html, css, image, paragraph, setup"
-        />
+            content="mythos, cradle, pet, adoption, legend, dragon, pegasi, kitsune, basilisks, family, heartwarming, friends, bond, loving, creature, cute" />
         <!-- Key words need to be updated with keywords for the website -->
         <meta name="author" content="Hantie Pistorius 262029" />
 
         <title>The Mythos Cradle - Contact</title>
 
+        <!-- Google Fonts, Poppins & Metamorphous -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
+            href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet" />
+
+        <!-- Bootstrap -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-        />
+            crossorigin="anonymous" />
+
+        <!-- Google Search Icon -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+
+        <!-- VERY IMPORTANT: CSS Stylesheet linking -->
         <link rel="stylesheet" href="../css/main.css" />
     </head>
 
@@ -32,11 +39,7 @@
         <header>
             <div class="navbar">
                 <div class="logo">
-                    <img
-                        src="../assets/img/logo.png"
-                        alt="Mythos Cradle Logo"
-                        class="logo"
-                    />
+                    <img src="../assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
                 </div>
 
                 <div class="navLinks">
@@ -46,57 +49,154 @@
                 </div>
 
                 <div class="searchBar">
-                    <a href="#">Search</a>
-                    <a href="#">Cart</a>
+                    <form>
+                        <div class="search">
+                            <span class="searchIcon material-symbols-outlined">search</span>
+                            <input class="searchInput" type="search" name="search" id="search" placeholder="Search" />
+                        </div>
+                    </form>
                 </div>
-            </div>
-
-            <div>
-                <h1>Contact Us</h1>
             </div>
         </header>
 
+        <section class="hero contactHero">
+            <h1>Contact Us</h1>
+        </section>
+
+        <!-- About -->
+        <section class="cardWhite contactAbout cardContact">
+            <div class="cardContent">
+                <h3>About</h3>
+                <h2>Mythos Cradle</h2>
+                <p>
+                    Welcome to The Mythos Cradle, where we are dedicated to nurturing the next generation of legendary
+                    companions into loving homes. As a sanctuary and adoption agency, we specialize in connecting
+                    families with magical creatures, carefully matching each little legend to the caretakers who will
+                    best support their growth and well-being. From playful blue dragons to gentle forest spirits, every
+                    adoption is designed to foster wonder, curiosity, and companionship. With a commitment to ethical
+                    care, safety, and magical enrichment, we strive to create joyful experiences for both creatures and
+                    their new families. Join us as we celebrate the enchantment of mythology and turn legendary beings
+                    into cherished members of your household.
+                </p>
+            </div>
+            <div>
+                <img src="../assets/img/contactImage 1.png" alt="Dragon Profile Image" />
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contactSection cardWhite cardContact">
+            <div class="contactLeft">
+                <div class="contactSocial">
+                    <h3>Contact us Through our</h3>
+                    <h2>Social Media Pages</h2>
+                    <div class="socialLinks contactLinks">
+                        <a href="https://www.facebook.com/theopenwindow"
+                            ><img src="../assets/img/sm1.png" alt="facebook" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.tiktok.com/@open_window_"
+                            ><img src="../assets/img/sm2.png" alt="tikTok" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.instagram.com/openwindowinstitute/"
+                            ><img src="../assets/img/sm3.png" alt="instagram" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.linkedin.com/school/openwindowinstitute/"
+                            ><img src="../assets/img/sm4.png" alt="x" style="width: 80px; height: 80px"
+                        /></a>
+                    </div>
+                </div>
+
+                <div class="contactMap">
+                    <h3>Or visit us at our</h3>
+                    <h2>Physical Location</h2>
+                    <!-- Map -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.065006019376!2d18.845303075606818!3d-33.9394561227218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdb33d01361945%3A0x45b7da17d194348e!2sOpen%20Window%20-%20Stellenbosch!5e0!3m2!1sen!2sza!4v1773664942864!5m2!1sen!2sza"
+                        width="100%"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="contactRight">
+                <div class="contactForm">
+                    <!-- Right/ form-->
+                    <form>
+                        <h2>SEND US A MESSAGE</h2>
+                        <div class="formElement">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" for="name" placeholder="Abc" required />
+                        </div>
+
+                        <div class="formElement">
+                            <label for="email">Email address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                for="email"
+                                placeholder="Abc@def.com"
+                                required />
+                        </div>
+
+                        <div class="formElement">
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" name="subject" rows="1" placeholder="This is optional"></textarea>
+                        </div>
+
+                        <div class="formElement">
+                            <label for="message">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="4"
+                                placeholder="Hi! I'd like to ask about..."
+                                required></textarea>
+                        </div>
+                        <button class="buttonBlue buttonContact" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
         <footer>
             <div class="footerTop">
                 <div class="logo">
-                    <img
-                        src="../assets/img/logo.png"
-                        alt="Mythos Cradle Logo"
-                        class="logo"
-                    />
+                    <img src="../assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
                     <p>Where every legendary creature finds a loving home.+</p>
                 </div>
 
                 <div class="footLinks">
                     <h4>Company</h4>
                     <a href="../index.html">Home</a>
-                    <a href="about.html">Adopt</a>
-                    <a href="#">Contact</a>
+                    <a href="../pages/about.html">Adopt</a>
+                    <a class="pageCurrent" href="#">Contact</a>
                 </div>
 
                 <div class="footSocials">
                     <h4>Social Media Links</h4>
                     <div class="socialLinks">
-                        <img
-                            src="../assets/img/sm1.png"
-                            alt="facebook"
-                            class="socialLogo"
-                        />
-                        <img
-                            src="../assets/img/sm2.png"
-                            alt="tikTok"
-                            class="socialLogo"
-                        />
-                        <img
-                            src="../assets/img/sm3.png"
-                            alt="instagram"
-                            class="socialLogo"
-                        />
-                        <img
-                            src="../assets/img/sm4.png"
-                            alt="x"
-                            class="socialLogo"
-                        />
+                        <a href="https://www.facebook.com/theopenwindow"
+                            ><img src="../assets/img/sm1.png" alt="facebook" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.tiktok.com/@open_window_"
+                            ><img src="../assets/img/sm2.png" alt="tikTok" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.instagram.com/openwindowinstitute/"
+                            ><img src="../assets/img/sm3.png" alt="instagram" style="width: 80px; height: 80px"
+                        /></a>
+
+                        <a href="https://www.linkedin.com/school/openwindowinstitute/"
+                            ><img src="../assets/img/sm4.png" alt="x" style="width: 80px; height: 80px"
+                        /></a>
                     </div>
                 </div>
             </div>
@@ -107,8 +207,10 @@
                 </div>
 
                 <div class="footerRight">
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy & Policy</a>
+                    <a href="https://www.openwindow.co.za/">Terms & Conditions</a>
+                    <a href="https://www.openwindow.co.za/wp-content/uploads/2025/07/POPIA-2025.pdf"
+                        >Privacy & Policy</a
+                    >
                 </div>
             </div>
         </footer>
@@ -116,7 +218,6 @@
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"
-        ></script>
+            crossorigin="anonymous"></script>
     </body>
 </html>

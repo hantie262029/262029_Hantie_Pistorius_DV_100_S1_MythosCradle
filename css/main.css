@@ -1,6 +1,8 @@
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
+    font-size: 16pt;
+    font-weight: 250;
 }
 
 @font-face {
@@ -10,92 +12,92 @@ body {
 
 h1 {
     font-family: "titleFont", sans-serif;
-    font-size: 96pt;
+    font-size: 80pt;
 }
 h2 {
-    font-weight: bolder;
+    font-weight: 700;
+    font-size: 40pt;
 }
 h3 {
     text-transform: uppercase;
-    font-size: medium;
-    font-weight: bold;
+    font-size: 18pt;
+    font-weight: 400;
+}
+h4 {
+    font-size: 18pt;
+    font-weight: 800;
+    line-height: 1.5;
 }
 
-p {
-    font-size: 16pt;
+/* Header and Navbar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    border-radius: 35px;
-    background-color: lightgray;
-    margin: 20px 40px;
+    padding: 10px 50px;
+    border-radius: 40px;
+    background-color: rgba(211, 211, 211, 0.85);
+    margin: 20px 10px;
 }
-
 .logo {
     display: flex;
     justify-content: left;
     width: 280px;
     display: block;
 }
-
 .navLinks {
     display: flex;
     gap: 20px;
 }
-
 .navbar a {
     text-decoration: none;
     color: #4d4d4d;
+    font-size: large;
+    font-weight: 600;
 }
-
 #actLink {
     color: #15d5f5;
 }
 
-.hero {
+.search {
+    --padding: 14px;
+    width: max-content;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 100px 15dvh;
-
-    height: 95vh;
-    text-align: center;
-    background-image: url(../assets/img/homeHeader.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.hero h1 {
-    color: #e9ad1c;
-}
-.hero p {
-    font-family: "Metamorphous", sans-serif;
-    font-size: 24pt;
-    color: #ffffff;
-}
-
-.homeCardA {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 90px 20dvh;
-    gap: 100px;
-    height: 100vh;
-    background-color: #002d68;
-    color: #ffffff;
+    padding: var(--padding);
+    border-radius: 20px;
+    background: #ffffff;
+    transition: box-shadow 0.25s;
 }
 
-.homeCardA h3 {
-    color: #e9ad1c;
+.search:focus-within {
+    box-shadow: 0 0 5px rgba(77, 77, 77, 0.75);
 }
-.button01 {
+
+.searchInput {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    padding: 0px var(--padding);
+    background: transparent;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+.searchInput::placeholder,
+.searchIcon {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+/* Buttons */
+/* Light Blue Button */
+.buttonBlue {
     margin-top: 15px;
     padding: 25px 50px;
     cursor: pointer;
@@ -105,32 +107,91 @@ p {
     background-color: #15d5f5;
     font-size: large;
 }
-
-.button01 a {
+.buttonBlue a {
     text-decoration: none;
     color: #eeeeee;
     font-weight: bold;
+}
+
+/* Hero card */
+.hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: 350px;
+    padding-bottom: 50px;
+}
+
+.hero h1 {
+    color: #ffffff;
+}
+
+/* Global Card Styling */
+.cardBlue {
+    background-color: #002d68;
+    color: #ffffff;
+}
+.cardBlue h3 {
+    color: #e9ad1c;
+}
+
+.cardWhite {
+    color: gray;
+}
+.cardWhite h3 {
+    color: #15d5f5;
+}
+
+/* Homepage/Index */
+/* Homepage Hero Card */
+.homeHero {
+    background-image: url(../assets/img/homeHeader.png);
+    padding: 100px 15dvh;
+    padding-left: 900px;
+    padding-right: 110px;
+    padding-bottom: 75px;
+
+    height: 110dvh;
+    text-align: left;
+}
+
+.homeHero h1 {
+    color: #e9ad1c;
+}
+
+.homeHero p {
+    font-family: "Metamorphous", sans-serif;
+    font-size: 20pt;
+}
+
+.homeCardA {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 90px 20dvh;
+    gap: 100px;
+    height: 100vh;
 }
 
 .homeCardB {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 60px 10dvh;
+    padding: 60px;
+    padding-left: 150px;
+    padding-right: 80px;
     gap: 50px;
-    height: 80vh;
-    background-color: #ffffff;
-    color: gray;
+    height: 700px;
 }
-
 .homeCardB h2 {
     color: #2f004f;
 }
-
-.homeCardB h3 {
-    color: #15d5f5;
-}
-
 .homeCardB img {
     border-radius: 20px;
 }
@@ -140,25 +201,91 @@ p {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: 90px 40dvh;
-    height: 115vh;
-    background-color: #002d68;
-    color: #ffffff;
+    height: 975px;
 }
 
-.homeCardC h3 {
-    color: #e9ad1c;
-}
-
-#pastLegendsCard {
+.pastLegendsCard {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 50px;
 }
 
-#pastLegendsCard img {
+.pastLegendsCard img {
     border-radius: 25px;
+}
+
+/* Contact Page */
+.contactHero {
+    background-image: url(../assets/img/contactHeader.png);
+}
+.cardContact h2 {
+    color: #002d68;
+}
+.contactAbout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px;
+    gap: 80px;
+    /* height: 700px; */
+}
+
+.contactAbout img {
+    border-radius: 25px;
+}
+
+.contactSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.contactLeft {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.contactMap iframe {
+    border-radius: 25px;
+}
+.contactForm,
+.contactForm h2 {
+    color: #ffffff;
+}
+.contactForm form {
+    padding: 20px;
+    padding-bottom: 35px;
+    gap: 10px;
+    /* background-color: #f4f4f4; */
+    border-radius: 35px;
+    background-image: url(../assets/img/formBackground.png);
+}
+
+.formElement {
+    width: 100%;
+    padding: 10px;
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea {
+    width: 95%;
+    padding: 20px 0;
+    padding-left: 25px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-family: "Poppins";
+}
+.buttonContact {
+    margin-left: 10px;
+    font-weight: 750;
 }
 
 /* FOOTER */
@@ -198,10 +325,6 @@ footer h4 {
     display: flex;
     gap: 10px;
     flex-direction: row;
-}
-
-.socialLogo {
-    width: 80px;
 }
 
 .footerBot {
