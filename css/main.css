@@ -365,6 +365,7 @@ Contact Page
 }
 .adoptRating {
     display: flex;
+
     gap: 50px;
 }
 
@@ -376,12 +377,34 @@ Contact Page
     color: #e9ad1c;
 }
 
-.adoptButtonDiv {
+.adoptButtonsDiv {
     display: flex;
-    gap: 25px;
+    gap: 35px;
     padding-bottom: 35px;
 }
+
+.adoptCounterDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    padding: 25px 50px;
+    border-radius: 15px;
+    border: none;
+    color: #ffffff;
+    background-color: #002d68;
+    font-size: large;
+    font-weight: 750;
+    cursor: default;
+}
 .buttonCounter {
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+.addToCradleButton {
+    width: 320px;
 }
 
 .adoptAddOns {
