@@ -339,6 +339,7 @@ Contact Page
     display: flex;
     gap: 20px;
 }
+
 .filterBar {
     display: flex;
     border-right: solid #ffffff 2px;
@@ -350,6 +351,16 @@ Contact Page
     background-color: transparent;
     border: none;
     color: #ffffff;
+}
+
+.sortForm input,
+.sortForm select {
+    background-color: rgba(255, 255, 255, 0.785);
+    border: none;
+    border-radius: 5px;
+    color: #2f004f;
+    padding: 6px;
+    font-weight: 300;
 }
 
 /* Adopt Cards */
@@ -392,7 +403,7 @@ Contact Page
     border-radius: 15px;
     border: none;
     color: #ffffff;
-    background-color: #002d68;
+    /* background-color: #002d68; */
     font-size: large;
     font-weight: 750;
     cursor: default;
