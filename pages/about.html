@@ -10,7 +10,7 @@
         <!-- Key words need to be updated with keywords for the website -->
         <meta name="author" content="Hantie Pistorius 262029" />
 
-        <title>The Mythos Cradle - Contact</title>
+        <title>The Mythos Cradle - Adopt</title>
 
         <!-- Google Fonts, Poppins & Metamorphous -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,38 +31,43 @@
     </head>
 
     <body>
-        <header>
-            <div class="navbar">
-                <div class="logo">
-                    <img src="../assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
-                </div>
-
-                <div class="navLinks">
-                    <a href="../index.html">Home</a>
-                    <a id="actLink" href="#">Adopt</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-
-                <div class="searchBar">
-                    <form>
-                        <div class="search">
-                            <button class="searchItem"><i class="fa-solid fa-magnifying-glass"></i></button>
-                            <input
-                                class="searchItem bar"
-                                type="search"
-                                name="search"
-                                id="search"
-                                placeholder="Search" />
-                            <button class="searchItem"><i class="fa-solid fa-basket-shopping"></i></button>
+        <div class="headerBGwithContent">
+            <div class="headerGlobalDiv headerAdoptDiv"></div>
+            <div class="headerAdoptContent">
+                <header>
+                    <div class="navbar">
+                        <div class="logo">
+                            <img src="../assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
                         </div>
-                    </form>
-                </div>
-            </div>
-        </header>
 
-        <section class="hero aboutHero">
-            <h1>Adopt A Creature</h1>
-        </section>
+                        <div class="navLinks">
+                            <a href="../index.html">Home</a>
+                            <a href="#">Adopt</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+
+                        <div class="searchBar">
+                            <form>
+                                <div class="search">
+                                    <button class="searchItem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <input
+                                        class="searchItem bar"
+                                        type="search"
+                                        name="search"
+                                        id="search"
+                                        placeholder="Search" />
+                                    <button class="searchItem"><i class="fa-solid fa-basket-shopping"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="hero aboutHero">
+                    <h1>Adopt A Creature</h1>
+                </section>
+            </div>
+        </div>
 
         <section class="cardBlue cardAdoptTop">
             <h2>Your journey with a little legend begins here.</h2>
@@ -77,46 +82,59 @@
         </section>
 
         <!-- Filter bar -->
-        <section class="cardYellow">
-            <div class="mainFilterBar">
-                <div class="filterLeft">
-                    <div class="filterBar">
-                        <button><i class="fa-solid fa-sliders"></i></button>
-                        <p>Filter</p>
-                        <button><i class="fa-solid fa-grip"></i></button>
-                    </div>
-                    <p>Showing 1-16 of 32 results</p>
+        <section class="cardYellow mainFilterBar">
+            <div class="filterLeft">
+                <div class="filterBar">
+                    <button><i class="fa-solid fa-sliders"></i></button>
+                    <p>Filter</p>
+                    <button><i class="fa-solid fa-grip"></i></button>
                 </div>
-                <form class="sortForm">
-                    <label for="showQuant">Show</label>
-                    <input type="number" id="showQuant" name="showQuant" value="6" min="1" max="32" />
-                    <label for="sortType">Sort by</label>
-                    <select id="sortType" name="sortType">
-                        <option value="default">Default</option>
-                        <option value="random">Random</option>
-                    </select>
-                </form>
+                <p>Showing 1-16 of 32 results</p>
             </div>
+
+            <form class="sortForm">
+                <label for="showQuant">Show</label>
+                <input type="number" id="showQuant" name="showQuant" value="6" min="1" max="32" />
+                <label for="sortType">Sort by</label>
+                <select id="sortType" name="sortType">
+                    <option value="default">Default</option>
+                    <option value="random">Random</option>
+                </select>
+            </form>
         </section>
 
-        <!-- Adopt Cards -->
+        <!-- Floating Button -->
+        <section class="viewCradleSection">
+            <button class="buttonViewCradle buttonBase buttonYellow">View Cradle</button>
+        </section>
+
+        <!-- ADOPT CARDS -->
+        <!-- Rewrote this because there was a missing closing tag and I couldn't find it with just looking -->
         <!-- Blue Dragon – Azuron -->
         <section class="adoptCard cardWhite adoptAzuron">
-            <!-- <div class="adoptImg"> -->
+            <!-- Profile Picture -->
             <img src="../assets/img/adopt1.png" alt="Azuron Adopt Profile Image" />
-            <!-- </div> -->
 
+            <!-- Content, to the right of of the profile picture -->
             <div class="adoptContent">
                 <h2>Blue Dragon – Azuron</h2>
-                <h3>R 2 500.00 <s>R 5 000.00</s></h3>
+                <!--Title and name-->
+                <h3>R 2 500.00 &emsp; <s>R 5 000.00</s></h3>
+                <!--Price-->
+
+                <!-- Rating and Pet tag -->
                 <div class="adoptRating">
-                    <div>
+                    <div class="adoptStars">
+                        <!-- 3 Stars -->
                         <i class="adoptStar fa-solid fa-star"></i>
                         <i class="adoptStar fa-solid fa-star"></i>
                         <i class="adoptStar fa-solid fa-star"></i>
                     </div>
                     <h5>Friendly Ally</h5>
+                    <!--Pet tag-->
                 </div>
+
+                <!-- About each pet Description -->
                 <p class="adoptAboutPara">
                     Azuron is a curious little dragon with a spark of mischief in his eyes. He loves exploring hidden
                     nooks and curling up in warm spots after a playful flight, leaving tiny trails of blue sparks
@@ -124,76 +142,472 @@
                     floating spark orbs around the room
                 </p>
 
-                <!-- I'm assuming this button is also not correct -->
+                <!-- Buttons to change quantity and to add to cradle -->
                 <div class="adoptButtonsDiv">
+                    <!-- Counter 'Button' -->
                     <div class="adoptCounterDiv cardBlue">
-                        <div class="">
-                            <button class="buttonCounter"><i class="fa-solid fa-minus"></i></button>
-                            1
-                            <!--This needs to be a dymanic thing-->
-                            <button class="buttonCounter"><i class="fa-solid fa-plus"></i></button>
-                        </div>
+                        <!-- Minus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-minus"></i></button>
+                        &emsp; 1 &emsp;
+                        <!--This needs to be a dynamic button input-->
+                        <!-- Plus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-plus"></i></button>
                     </div>
-                    <button class="addToCradleButton buttonBase buttonBlue">Add to Cradle</button>
+                    <!-- Add to Cradle Button -->
+                    <div class="addToCradleButton buttonBase buttonBlue">Add to Cradle</div>
                 </div>
-                <p class="adoptAddOns">
-                    <!--This is not how you do the tab spacing :) -->
-                    Bed : &emsp; Cozy lava-foam bed <br />
-                    Treats : &emsp; Frostberry treats <br />
-                    Toys : &emsp; Flame-safe balls, Wing-wrangling hoops, Tiny treasure chests <br />
-                    Unique Item : &emsp; Mini Fire Orb
-                </p>
+
+                <!-- Greyed out 'Add ons' -->
+                <div class="adoptAddOns">
+                    <!-- Placed in a flex container to allow for proper spacing -->
+                    <!-- Classes are named like a dictionary would be cause that makes sense for my brain -->
+                    <!-- New lines are made with a </br> break -->
+                    <div class="adoptAddParaKey">
+                        <p>
+                            Bed <br />
+                            Treats <br />
+                            Toys <br />
+                            Unique Item
+                        </p>
+                    </div>
+
+                    <div class="adoptAddParaColon">
+                        <p>
+                            :<br />
+                            :<br />
+                            :<br />
+                            :
+                        </p>
+                    </div>
+
+                    <!-- Below is Unique for each pet. There must be a better way of doing this -->
+                    <div class="adoptAddParaItem">
+                        <p>
+                            Cozy lava-foam bed <br />
+                            Frostberry treats <br />
+                            Flame-safe balls, Wing-wrangling hoops, Tiny treasure chests <br />
+                            Mini Fire Orb
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-                <!-- Kitsune – Yuki -->
+        <!-- Kitsune – Yuki -->
         <section class="adoptCard cardBlue adoptYuki">
-            <!-- <div class="adoptImg"> -->
+            <!-- Profile Picture -->
             <img src="../assets/img/adopt2.png" alt="Yuki Adopt Profile Image" />
-            <!-- </div> -->
 
+            <!-- Content, to the right of of the profile picture -->
             <div class="adoptContent">
                 <h2>Kitsune – Yuki</h2>
-                <h3>R 4 500.00</s></h3>
+                <!--Title and name-->
+                <h3>R 4 500.00</h3>
+                <!--Price-->
+
+                <!-- Rating and Pet tag -->
                 <div class="adoptRating">
-                    <div>
+                    <div class="adoptStars">
+                        <!-- 4 Stars -->
                         <i class="adoptStar fa-solid fa-star"></i>
                         <i class="adoptStar fa-solid fa-star"></i>
                         <i class="adoptStar fa-solid fa-star"></i>
                         <i class="adoptStar fa-solid fa-star"></i>
                     </div>
                     <h5>Gentle Guardian</h5>
+                    <!--Pet tag-->
                 </div>
+
+                <!-- About each pet Description -->
                 <p class="adoptAboutPara">
-                    Yuki is a mischievous yet loving fox spirit, full of curiosity and clever ideas. She delights in playful tricks and quietly watching over her friends, her tails swishing with contentment. Yuki especially enjoys interactive games and hiding small trinkets to surprise her caretakers
+                    Yuki is a mischievous yet loving fox spirit, full of curiosity and clever ideas. She delights in
+                    playful tricks and quietly watching over her friends, her tails swishing with contentment. Yuki
+                    especially enjoys interactive games and hiding small trinkets to surprise her caretakers
                 </p>
 
-                <!-- I'm assuming this button is also not correct -->
+                <!-- Buttons to change quantity and to add to cradle -->
                 <div class="adoptButtonsDiv">
+                    <!-- Counter 'Button' -->
                     <div class="adoptCounterDiv cardYellow">
-                        <div class="">
-                            <button class="buttonCounter"><i class="fa-solid fa-minus"></i></button>
-                            1
-                            <!--This needs to be a dymanic thing-->
-                            <button class="buttonCounter"><i class="fa-solid fa-plus"></i></button>
-                        </div>
+                        <!-- Minus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-minus"></i></button>
+                        &emsp; 1 &emsp;
+                        <!--This needs to be a dynamic button input-->
+                        <!-- Plus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-plus"></i></button>
                     </div>
-                    <button class="addToCradleButton buttonBase buttonBlue">Add to Cradle</button>
+                    <!-- Add to Cradle Button -->
+                    <div class="addToCradleButton buttonBase buttonBlue">Add to Cradle</div>
                 </div>
-                <p class="adoptAddOns">
-                    <!--This is not how you do the tab spacing :) -->
-                    Bed : &emsp; Silk-lined den bed<br />
-                    Treats : &emsp; Moonfruit snacks<br />
-                    Toys : &emsp; Puzzle cubes, Jingling bells, Magical ribbons<br />
-                    Unique Item : &emsp; Mini Spirit Lantern
-                </p>
+
+                <!-- Greyed out 'Add ons' -->
+                <div class="adoptAddOns">
+                    <!-- Placed in a flex container to allow for proper spacing -->
+                    <!-- Classes are named like a dictionary would be cause that makes sense for my brain -->
+                    <!-- New lines are made with a </br> break -->
+                    <div class="adoptAddParaKey">
+                        <p>
+                            Bed <br />
+                            Treats <br />
+                            Toys <br />
+                            Unique Item
+                        </p>
+                    </div>
+
+                    <div class="adoptAddParaColon">
+                        <p>
+                            :<br />
+                            :<br />
+                            :<br />
+                            :
+                        </p>
+                    </div>
+
+                    <!-- Below is Unique for each pet. There must be a better way of doing this -->
+                    <div class="adoptAddParaItem">
+                        <p>
+                            Silk-lined den bed <br />
+                            Moonfruit snacks <br />
+                            Puzzle cubes, Jingling bells, Magical ribbons <br />
+                            Mini Spirit Lantern
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Floating Button -->
-         <section class="viewCradleSection">
-            <button class="buttonViewCradle buttonBase buttonYellow ">View Cradle</button>
-         </section>
+        <!-- Griffin – Aurelia -->
+        <section class="adoptCard cardWhite adoptAurelia">
+            <!-- Profile Picture -->
+            <img src="../assets/img/adopt3.png" alt="Aurelia Adopt Profile Image" />
+
+            <!-- Content, to the right of of the profile picture -->
+            <div class="adoptContent">
+                <h2>Griffin – Aurelia</h2>
+                <!--Title and name-->
+                <h3>R 6 500.00</h3>
+                <!--Price-->
+
+                <!-- Rating and Pet tag -->
+                <div class="adoptRating">
+                    <div class="adoptStars">
+                        <!-- 3 Stars -->
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                    </div>
+                    <h5>Friendly Ally</h5>
+                    <!--Pet tag-->
+                </div>
+
+                <!-- About each pet Description -->
+                <p class="adoptAboutPara">
+                    Aurelia is a proud little griffin, courageous yet gentle. She loves climbing, exploring high
+                    perches, and curling up near those she trusts, always watching the world with wise golden eyes. She
+                    adores gentle games of chase and loves to show off her tiny but majestic wings.
+                </p>
+
+                <!-- Buttons to change quantity and to add to cradle -->
+                <div class="adoptButtonsDiv">
+                    <!-- Counter 'Button' -->
+                    <div class="adoptCounterDiv cardBlue">
+                        <!-- Minus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-minus"></i></button>
+                        &emsp; 1 &emsp;
+                        <!--This needs to be a dynamic button input-->
+                        <!-- Plus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <!-- Add to Cradle Button -->
+                    <div class="addToCradleButton buttonBase buttonBlue">Add to Cradle</div>
+                </div>
+
+                <!-- Greyed out 'Add ons' -->
+                <div class="adoptAddOns">
+                    <!-- Placed in a flex container to allow for proper spacing -->
+                    <!-- Classes are named like a dictionary would be cause that makes sense for my brain -->
+                    <!-- New lines are made with a </br> break -->
+                    <div class="adoptAddParaKey">
+                        <p>
+                            Bed <br />
+                            Treats <br />
+                            Toys <br />
+                            Unique Item
+                        </p>
+                    </div>
+
+                    <div class="adoptAddParaColon">
+                        <p>
+                            :<br />
+                            :<br />
+                            :<br />
+                            :
+                        </p>
+                    </div>
+
+                    <!-- Below is Unique for each pet. There must be a better way of doing this -->
+                    <div class="adoptAddParaItem">
+                        <p>
+                            Feather-lined perch bed <br />
+                            Sunfruit treats <br />
+                            Wing rings, Soft talon toys, Mini prey plushies <br />
+                            Tiny Sunstone Perch
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Water Wisp – Lumina -->
+        <section class="adoptCard cardBlue adoptLumina">
+            <!-- Profile Picture -->
+            <img src="../assets/img/adopt4.png" alt="Lumina Adopt Profile Image" />
+
+            <!-- Content, to the right of of the profile picture -->
+            <div class="adoptContent">
+                <h2>Water Wisp – Lumina</h2>
+                <!--Title and name-->
+                <h3>R 40,000.00</h3>
+                <!--Price-->
+
+                <!-- Rating and Pet tag -->
+                <div class="adoptRating">
+                    <div class="adoptStars">
+                        <!-- 5 Stars -->
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                    </div>
+                    <h5>Beloved Companion</h5>
+                    <!--Pet tag-->
+                </div>
+
+                <!-- About each pet Description -->
+                <p class="adoptAboutPara">
+                    Lumina drifts like a shimmer of moonlight, soft and gentle. Playful and curious, she glides through
+                    her surroundings, bringing calm and quiet magic wherever she goes. She loves to follow gentle
+                    ripples in water or light games, leaving a faint glowing trail that enchants everyone nearby.
+                </p>
+
+                <!-- Buttons to change quantity and to add to cradle -->
+                <div class="adoptButtonsDiv">
+                    <!-- Counter 'Button' -->
+                    <div class="adoptCounterDiv cardYellow">
+                        <!-- Minus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-minus"></i></button>
+                        &emsp; 1 &emsp;
+                        <!--This needs to be a dynamic button input-->
+                        <!-- Plus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <!-- Add to Cradle Button -->
+                    <div class="addToCradleButton buttonBase buttonBlue">Add to Cradle</div>
+                </div>
+
+                <!-- Greyed out 'Add ons' -->
+                <div class="adoptAddOns">
+                    <!-- Placed in a flex container to allow for proper spacing -->
+                    <!-- Classes are named like a dictionary would be cause that makes sense for my brain -->
+                    <!-- New lines are made with a </br> break -->
+                    <div class="adoptAddParaKey">
+                        <p>
+                            Bed <br />
+                            Treats <br />
+                            Toys <br />
+                            Unique Item
+                        </p>
+                    </div>
+
+                    <div class="adoptAddParaColon">
+                        <p>
+                            :<br />
+                            :<br />
+                            :<br />
+                            :
+                        </p>
+                    </div>
+
+                    <!-- Below is Unique for each pet. There must be a better way of doing this -->
+                    <div class="adoptAddParaItem">
+                        <p>
+                            Crystal bowl bed <br />
+                            Dewdrop nectar <br />
+                            Floating orbs, Ripple rings, Water bell<br />
+                            Mini Waterfall Sphere
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pegasus – Starwind -->
+        <section class="adoptCard cardWhite adoptStarwind">
+            <!-- Profile Picture -->
+            <img src="../assets/img/adopt5.png" alt="Starwind Adopt Profile Image" />
+
+            <!-- Content, to the right of of the profile picture -->
+            <div class="adoptContent">
+                <h2>Pegasus – Starwind</h2>
+                <!--Title and name-->
+                <h3>R 5 000.00</h3>
+                <!--Price-->
+
+                <!-- Rating and Pet tag -->
+                <div class="adoptRating">
+                    <div class="adoptStars">
+                        <!-- 4 Stars -->
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                    </div>
+                    <h5>Gentle Guardian</h5>
+                    <!--Pet tag-->
+                </div>
+
+                <!-- About each pet Description -->
+                <p class="adoptAboutPara">
+                    Starwind is a gentle, curious Pegasus foal with a playful spirit. He loves short flights and sunny
+                    naps, his gleaming wings always ready for discovery. He enjoys small games of chase and nuzzles to
+                    show affection, quickly forming strong bonds with those he trusts.
+                </p>
+
+                <!-- Buttons to change quantity and to add to cradle -->
+                <div class="adoptButtonsDiv">
+                    <!-- Counter 'Button' -->
+                    <div class="adoptCounterDiv cardBlue">
+                        <!-- Minus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-minus"></i></button>
+                        &emsp; 1 &emsp;
+                        <!--This needs to be a dynamic button input-->
+                        <!-- Plus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <!-- Add to Cradle Button -->
+                    <div class="addToCradleButton buttonBase buttonBlue">Add to Cradle</div>
+                </div>
+
+                <!-- Greyed out 'Add ons' -->
+                <div class="adoptAddOns">
+                    <!-- Placed in a flex container to allow for proper spacing -->
+                    <!-- Classes are named like a dictionary would be cause that makes sense for my brain -->
+                    <!-- New lines are made with a </br> break -->
+                    <div class="adoptAddParaKey">
+                        <p>
+                            Bed <br />
+                            Treats <br />
+                            Toys <br />
+                            Unique Item
+                        </p>
+                    </div>
+
+                    <div class="adoptAddParaColon">
+                        <p>
+                            :<br />
+                            :<br />
+                            :<br />
+                            :
+                        </p>
+                    </div>
+
+                    <!-- Below is Unique for each pet. There must be a better way of doing this -->
+                    <div class="adoptAddParaItem">
+                        <p>
+                            Soft cloud bed <br />
+                            Starhay treats <br />
+                            Flying hoops, Feathered balls, Small riding saddle <br />
+                            Mini Wind Hoof Ball
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forest Spirit – Briar -->
+        <section class="adoptCard cardBlue adoptBriar">
+            <!-- Profile Picture -->
+            <img src="../assets/img/adopt6.png" alt="Briar Adopt Profile Image" />
+
+            <!-- Content, to the right of of the profile picture -->
+            <div class="adoptContent">
+                <h2>Forest Spirit – Briar</h2>
+                <!--Title and name-->
+                <h3>R 3 500.00</h3>
+                <!--Price-->
+
+                <!-- Rating and Pet tag -->
+                <div class="adoptRating">
+                    <div class="adoptStars">
+                        <!-- 5 Stars -->
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                        <i class="adoptStar fa-solid fa-star"></i>
+                    </div>
+                    <h5>Beloved Companion</h5>
+                    <!--Pet tag-->
+                </div>
+
+                <!-- About each pet Description -->
+                <p class="adoptAboutPara">
+                    Briar is a tiny guardian of the woods, curious, gentle, and full of life. He loves leafy hideaways
+                    and quietly exploring gardens, always humming with a touch of magic. He enjoys collecting small
+                    natural treasures and bringing them to his caretakers as gifts, showing his playful personality.
+                </p>
+
+                <!-- Buttons to change quantity and to add to cradle -->
+                <div class="adoptButtonsDiv">
+                    <!-- Counter 'Button' -->
+                    <div class="adoptCounterDiv cardYellow">
+                        <!-- Minus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-minus"></i></button>
+                        &emsp; 1 &emsp;
+                        <!--This needs to be a dynamic button input-->
+                        <!-- Plus -->
+                        <button class="buttonCounter"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <!-- Add to Cradle Button -->
+                    <div class="addToCradleButton buttonBase buttonBlue">Add to Cradle</div>
+                </div>
+
+                <!-- Greyed out 'Add ons' -->
+                <div class="adoptAddOns">
+                    <!-- Placed in a flex container to allow for proper spacing -->
+                    <!-- Classes are named like a dictionary would be cause that makes sense for my brain -->
+                    <!-- New lines are made with a </br> break -->
+                    <div class="adoptAddParaKey">
+                        <p>
+                            Bed <br />
+                            Treats <br />
+                            Toys <br />
+                            Unique Item
+                        </p>
+                    </div>
+
+                    <div class="adoptAddParaColon">
+                        <p>
+                            :<br />
+                            :<br />
+                            :<br />
+                            :
+                        </p>
+                    </div>
+
+                    <!-- Below is Unique for each pet. There must be a better way of doing this -->
+                    <div class="adoptAddParaItem">
+                        <p>
+                            Mossy bed <br />
+                            Berry treats <br />
+                            Twig rattles, Leaf dolls, Acorn balls <br />
+                            Mini Leafy Hideout
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer>
@@ -206,8 +620,8 @@
                 <div class="footLinks">
                     <h4>Company</h4>
                     <a href="../index.html">Home</a>
-                    <a href="about.html">Adopt</a>
-                    <a class="pageCurrent" href="#">Contact</a>
+                    <a href="#">Adopt</a>
+                    <a href="contact.html">Contact</a>
                 </div>
 
                 <div class="footSocials">

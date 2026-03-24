@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -31,9 +34,7 @@ h4 {
 
 /* Header and Navbar */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
+    padding: 45px 80px;
 }
 
 .navbar {
@@ -41,10 +42,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 50px;
-    border-radius: 40px;
+    border-radius: 35px;
     background-color: rgba(211, 211, 211, 0.85);
-    margin: 20px 10px;
 }
+
 .logo {
     display: flex;
     justify-content: left;
@@ -60,8 +61,10 @@ header {
     color: #4d4d4d;
     font-size: large;
     font-weight: 600;
+    transition: color 0.25s;
 }
-#actLink {
+
+.navbar a:hover {
     color: #15d5f5;
 }
 
@@ -104,6 +107,11 @@ header {
     color: #ffffff;
     font-size: large;
     font-weight: 750;
+    transition: box-shadow;
+}
+
+.buttonBase:active {
+    box-shadow: 0 0 5px rgba(77, 77, 77, 0.75);
 }
 
 .buttonBase a {
@@ -166,18 +174,59 @@ header {
     color: #ffffff;
 }
 
+.headerGlobalDiv {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.headerHomeDiv {
+    background-image: url(../assets/img/homeHeader.png);
+    background-color: #43696c;
+}
+.headerContactDiv {
+    background-image: url(../assets/img/contactHeader.png);
+}
+
+/* This is what makes the background of the Adopt page header blurred
+The contents gets placed in a <div> and the background image in a <div>
+Together these are in a new <div>,
+allowing for the background to get blurred separately from content
+*/
+
+.headerAdoptDiv {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 440px;
+    width: 100dvw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../assets/img/adoptHeader.png);
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.headerAdoptContent {
+    z-index: 5;
+    background-color: rgba(184, 77, 77, 0.1);
+    position: relative;
+}
+
 /*
 Homepage/Index
 */
 /* Homepage Hero Card */
 .homeHero {
-    background-image: url(../assets/img/homeHeader.png);
-    padding: 100px 15dvh;
+    padding: 90px 15dvh;
     padding-left: 900px;
     padding-right: 110px;
     padding-bottom: 75px;
 
-    height: 110dvh;
+    height: 105dvh;
     text-align: left;
 }
 
@@ -236,13 +285,21 @@ Homepage/Index
 .pastLegendsCard img {
     border-radius: 25px;
 }
+.pastLegendProfile {
+    transition: box-shadow 0.2s;
+}
+
+.pastLegendProfile:hover {
+    box-shadow: 0 0 15px rgba(21, 213, 245, 0.5);
+}
 
 /*
 Contact Page
 */
 .contactHero {
-    background-image: url(../assets/img/contactHeader.png);
+    height: 250px;
 }
+
 .cardContact h2 {
     color: #002d68;
 }
@@ -252,7 +309,6 @@ Contact Page
     align-items: center;
     padding: 50px;
     gap: 80px;
-    /* height: 700px; */
 }
 
 .contactAbout img {
@@ -287,7 +343,6 @@ Contact Page
     padding: 15px;
     padding-bottom: 35px;
     gap: 10px;
-    /* background-color: #f4f4f4; */
     border-radius: 35px;
     background-image: url(../assets/img/formBackground.png);
 }
@@ -314,7 +369,7 @@ Contact Page
 
 /* About/Adopt Page */
 .aboutHero {
-    background-image: url(../assets/img/adoptHeader.png);
+    height: 250px;
 }
 
 .cardAdoptTop {
@@ -332,19 +387,24 @@ Contact Page
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 25px;
+    justify-items: center;
+    padding: 10px 25px;
 }
 
 .filterLeft {
     display: flex;
+    align-items: baseline;
+    justify-content: baseline;
     gap: 20px;
 }
 
 .filterBar {
     display: flex;
+    align-items: baseline;
+    justify-content: center;
     border-right: solid #ffffff 2px;
     padding-right: 20px;
-    gap: 5px;
+    gap: 8px;
 }
 
 .filterBar button {
@@ -362,13 +422,18 @@ Contact Page
     padding: 6px;
     font-weight: 300;
 }
+.sortForm {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 20px;
+}
 
 /* Adopt Cards */
 .adoptCard {
     display: flex;
     gap: 80px;
     padding: 85px;
-    /* background-color: #15d5f5; */
 }
 
 .adoptCard img {
@@ -376,14 +441,29 @@ Contact Page
 }
 .adoptRating {
     display: flex;
-
     gap: 50px;
 }
 
-.adoptRating h5 {
-    padding-left: 25px;
-    border-left: solid #000000 2px;
+/* Adding a div/class to the h3 doesn't change the actual colour, so
+doing it a bit more hard-coded */
+.adoptAzuron h3,
+.adoptAurelia h3,
+.adoptStarwind h3 {
+    color: #9f9f9f;
 }
+
+.adoptYuki h3,
+.adoptLumina h3,
+.adoptBriar h3 {
+    color: #15d5f5;
+}
+
+.adoptRating h5 {
+    padding-left: 35px;
+    border-left: solid #9f9f9f 2px;
+    color: #9f9f9f;
+}
+
 .adoptStar {
     color: #e9ad1c;
 }
@@ -403,11 +483,11 @@ Contact Page
     border-radius: 15px;
     border: none;
     color: #ffffff;
-    /* background-color: #002d68; */
     font-size: large;
     font-weight: 750;
     cursor: default;
 }
+
 .buttonCounter {
     border: none;
     background-color: transparent;
@@ -415,14 +495,38 @@ Contact Page
     cursor: pointer;
 }
 .addToCradleButton {
-    width: 320px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .adoptAddOns {
     border-top: solid #9f9f9f 2px;
     color: #9f9f9f;
     padding-top: 35px;
+    display: flex;
+    gap: 20px;
 }
+
+.adoptAboutPara {
+    padding-top: 20px;
+}
+
+.viewCradleSection {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+.buttonViewCradle {
+    background-color: rgba(233, 173, 28, 0.7);
+    transition: background-color 0.2s;
+}
+.buttonViewCradle:hover {
+    background-color: rgba(233, 173, 28, 1);
+}
+
 /*
 FOOTER
 */
@@ -456,12 +560,26 @@ footer h4 {
 .footLinks a {
     text-decoration: none;
     color: grey;
+    transition: color 0.25s;
+}
+
+.footLinks a:hover {
+    color: #15d5f5;
 }
 
 .socialLinks {
     display: flex;
     gap: 10px;
     flex-direction: row;
+}
+
+.socialLinks a {
+    transition: box-shadow;
+    border-radius: 10px;
+}
+
+.socialLinks a:hover {
+    box-shadow: 0 0 5px rgba(21, 213, 245, 0.75);
 }
 
 .footerBot {
@@ -478,4 +596,9 @@ footer h4 {
 .footerBot a {
     text-decoration: none;
     color: grey;
+    transition: color 0.25s;
+}
+
+.footerBot a:hover {
+    color: #15d5f5;
 }

@@ -31,46 +31,66 @@
     </head>
 
     <body>
-        <header>
-            <div class="navbar">
-                <div class="logo">
-                    <img src="assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
-                </div>
+        <div class="headerGlobalDiv headerHomeDiv">
+            <header>
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="assets/img/logo.png" alt="Mythos Cradle Logo" class="logo" />
+                    </div>
 
-                <div class="navLinks">
-                    <a id="actLink" href="#">Home</a>
-                    <a href="pages/about.html">Adopt</a>
-                    <a href="pages/contact.html">Contact</a>
-                </div>
+                    <div class="navLinks">
+                        <a href="#">Home</a>
+                        <a href="pages/about.html">Adopt</a>
+                        <a href="pages/contact.html">Contact</a>
+                    </div>
 
-                <div class="searchBar">
-                    <form>
-                        <div class="search">
-                            <button class="searchItem"><i class="fa-solid fa-magnifying-glass"></i></button>
-                            <input
-                                class="searchItem bar"
-                                type="search"
-                                name="search"
-                                id="search"
-                                placeholder="Search" />
-                            <button class="searchItem"><i class="fa-solid fa-basket-shopping"></i></button>
-                        </div>
-                    </form>
+                    <div class="searchBar">
+                        <form>
+                            <div class="search">
+                                <button class="searchItem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <input
+                                    class="searchItem bar"
+                                    type="search"
+                                    name="search"
+                                    id="search"
+                                    placeholder="Search" />
+                                <button class="searchItem"><i class="fa-solid fa-basket-shopping"></i></button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
-        <section class="hero homeHero">
-            <h1>The Mythos Cradle</h1>
-            <p>Where legends become loved ones</p>
-        </section>
+            <section class="hero homeHero">
+                <h1>The Mythos Cradle</h1>
+                <p>Where legends become loved ones</p>
+            </section>
+        </div>
 
         <section class="homeCardA cardBlue">
             <!-- Journey Card  -->
-            <!-- The image slider will go here -->
-            <div id="imgSlider">
-                <img src="assets/img/imageSlider1.png" alt="imageslider placeholder" class="imageSlider" />
+            <!-- The image slider only has one image, this will still be updated -->
+            <div id="imageSlider" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img
+                            src="../assets/img/imageSlider1.png"
+                            class="d-block w-400"
+                            alt="image slider placeholder" />
+                    </div>
+                </div>
+
+                <!-- Forward/backward Bootstrap Buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
+
             <div class="cardContent">
                 <h3>Begin your journey</h3>
                 <h2>Tiny Legends Big Hearts</h2>
@@ -162,7 +182,7 @@
 
                 <div class="footLinks">
                     <h4>Company</h4>
-                    <a class="pageCurrent" href="#">Home</a>
+                    <a href="#">Home</a>
                     <a href="pages/about.html">Adopt</a>
                     <a href="pages/contact.html">Contact</a>
                 </div>

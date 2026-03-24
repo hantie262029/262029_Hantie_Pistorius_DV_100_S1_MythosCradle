@@ -1,1 +1,3 @@
 .vscode/settings.json
+# Ignore all .mp4 file types
+*.mp4
