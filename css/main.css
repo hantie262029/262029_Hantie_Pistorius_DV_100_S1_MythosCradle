@@ -387,20 +387,19 @@ Contact Page
     display: flex;
     justify-content: space-between;
     align-items: center;
-    justify-items: center;
     padding: 10px 25px;
 }
 
 .filterLeft {
     display: flex;
-    align-items: baseline;
-    justify-content: baseline;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
 .filterBar {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     border-right: solid #ffffff 2px;
     padding-right: 20px;
