@@ -32,6 +32,13 @@ h4 {
     line-height: 1.5;
 }
 
+/* Remove all outlines from input and text fields */
+input,
+textarea {
+    border: none;
+    outline: none;
+}
+
 /* Header and Navbar */
 header {
     padding: 45px 80px;
@@ -95,6 +102,24 @@ header {
 .search button {
     color: #4d4d4d;
     padding: 0px 10px;
+}
+
+/* filter search bar list */
+.result-box ul {
+    border-top: 1px solid #999;
+    padding: 5px 10px;
+    background-color: rgba(240, 240, 240, 0.95);
+    border-radius: 10px;
+}
+.result-box ul li {
+    list-style: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.result-box ul li:hover {
+    background-color: rgba(21, 213, 245, 0.5);
 }
 
 /* Buttons */

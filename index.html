@@ -44,21 +44,34 @@
                         <a href="pages/contact.html">Contact</a>
                     </div>
 
+                    <!-- Search bar and cart modal button -->
                     <div class="searchBar">
-                        <form>
-                            <div class="search">
-                                <button class="searchItem">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </button>
-                                <input
-                                    class="searchItem bar"
-                                    type="search"
-                                    name="search"
-                                    id="search"
-                                    placeholder="Search" />
-                                <button class="searchItem"><i class="fa-solid fa-basket-shopping"></i></button>
+                        <div class="search">
+                            <!-- Button that takes you to the specific section on about  -->
+                            <div id="searchButtonDiv">
+                                <a class="searchItem" id="searchButton" href="#">
+                                    <i class="fa-solid fa-magnifying-glass"></i
+                                ></a>
                             </div>
-                        </form>
+
+                            <!-- Search field  -->
+                            <div class="searchBox bar">
+                                <input
+                                    class="searchItem"
+                                    type="search"
+                                    id="search"
+                                    placeholder="Search"
+                                    autocomplete="off" />
+                            </div>
+
+                            <!-- Cart Button that triggers the full screen cart modal -->
+                            <button class="searchItem cartButton">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </div>
+
+                        <!-- Filtered list gets shown here for the search bar -->
+                        <div class="result-box"></div>
                     </div>
                 </div>
             </header>
