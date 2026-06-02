@@ -252,6 +252,7 @@ Homepage/Index
     padding-bottom: 75px;
 
     height: 105dvh;
+    min-height: 800px;
     text-align: left;
 }
 
@@ -316,6 +317,18 @@ Homepage/Index
 
 .pastLegendProfile:hover {
     box-shadow: 0 0 15px rgba(21, 213, 245, 0.5);
+}
+
+/* Styling for image slider images */
+.carousel-item {
+    width: 615px;
+    height: 652px;
+}
+
+.carousel-item img {
+    border-radius: 15px;
+    height: 100%;
+    object-fit: cover;
 }
 
 /*
@@ -566,8 +579,7 @@ doing it a bit more hard-coded */
     /* Clearing form styling */
     background-color: transparent;
     border: none;
-    cursor: default; /*not entirely sure what cursor behavior need to be*/
-    /* Still need to get rid of the arrows */
+    outline: none;
 }
 
 .addToCradleButton {
@@ -575,6 +587,12 @@ doing it a bit more hard-coded */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.addToCradleButton:disabled {
+    background-color: rgba(211, 211, 211, 0.85);
+    opacity: 0.5;
+    cursor: none;
 }
 
 .adoptAddOns {

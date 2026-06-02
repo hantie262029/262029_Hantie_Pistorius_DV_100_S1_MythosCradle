@@ -113,13 +113,15 @@ countMe = (operator, petID) => {
     // Extract element from HTML
     let num = document.getElementById(petID).value;
 
-    // Minus, making
+    // Minus, making the minimum that can be added 1
     if (operator == "minus") {
         if (num > 1) {
             num -= 1;
         }
     }
 
+    // Plus, making the maximum that can be added 50
+    // This is arbitrary but I don't want to add too many
     if (operator == "plus") {
         if (num < 50) {
             num++;
@@ -127,3 +129,19 @@ countMe = (operator, petID) => {
     }
     document.getElementById(petID).value = num;
 };
+
+// Disable 'add to cart' buttons once they have been clicked once
+// this might actually all still change based on the add to cart functionality
+let btns = document.querySelectorAll(".addToCradleButton");
+
+btns.forEach(disableBtn);
+console.log(btns);
+function disableBtn(btn) {
+    btn.addEventListener("click", () => {
+        // Set the button to be disabled after click
+        btn.disabled = true;
+
+        // change the text
+        btn.textContent = "Added to cart";
+    });
+}
