@@ -71,8 +71,10 @@
                                 id="cartButton"
                                 type="button"
                                 data-bs-toggle="modal"
-                                data-bs-target="#cartModal">
+                                data-bs-target="#cartModal"
+                                onclick="viewCradle()">
                                 <i class="fa-solid fa-basket-shopping"></i>
+                                <span class="quantity">#</span>
                             </button>
                         </div>
 
@@ -268,20 +270,40 @@
 
         <!-- Cart Modal -->
         <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
                 <div class="modal-content">
                     <!-- Header/Tile -->
                     <div class="modal-header cartHeader">
-                        <h1 class="modal-title" id="cartModalLabel">Shopping Cart</h1>
+                        <h1 class="modal-title" id="cartModalLabel">Shopping Cradle</h1>
                     </div>
 
                     <!-- The Cart body will be populated with JS if cart is populated -->
                     <!-- If the cart is empty the below will show -->
-                    <div class="modal-body cartBody cartMessage">
-                        <p>
-                            Oh no! It seems like your cart is currently empty. <br />
-                            Please continue searching to find your perfect companion.
-                        </p>
+                    <div class="modal-body cartBody">
+                        <!-- Message to display when cart is empty -->
+                        <!-- <div class="cartMessage">
+                            <p>
+                                Oh no! It seems like your cradle is currently empty. <br />
+                                Please continue searching to find your perfect companion.
+                            </p>
+                        </div> -->
+
+                        <!-- This gets populated with javascript as soon as Items get added to the cart -->
+                        <div class="cardleContent">
+                            <div class="cradleHeader">
+                                <h4>Cradle</h4>
+                            </div>
+                            <hr noshade="true" size="1px" />
+                            <div class="cradleItems">
+                                <!-- Gets added in JS -->
+                            </div>
+                            <hr noshade="true" size="1px" />
+
+                            <div class="cradleFooter">
+                                <h4>Total</h4>
+                                <p class="total">R0</p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Cart Modal Footer -->
@@ -299,8 +321,8 @@
                                 type="button"
                                 class="btn btn-primary buttonBase buttonCartModal buttonBlue"
                                 id="buttonCartFinish"
-                                href="#"
-                                data-bs-dismiss="modal">
+                                data-bs-dismiss="modal"
+                                href="#">
                                 Finish Adoption
                             </a>
                         </div>

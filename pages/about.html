@@ -74,6 +74,7 @@
                                     data-bs-toggle="modal"
                                     data-bs-target="#cartModal">
                                     <i class="fa-solid fa-basket-shopping"></i>
+                                    <span class="quantity">#</span>
                                 </button>
                             </div>
 
@@ -136,7 +137,13 @@
 
         <!-- Floating Button -->
         <section class="viewCradleSection">
-            <button class="buttonViewCradle buttonBase buttonYellow">View Cradle</button>
+            <button
+                class="buttonViewCradle buttonBase buttonYellow"
+                data-bs-toggle="modal"
+                data-bs-target="#cartModal"
+                onclick="viewCradle()">
+                View Cradle
+            </button>
         </section>
 
         <!-- ADOPT CARDS -->
@@ -199,7 +206,9 @@
                         </button>
                     </div>
                     <!-- Add to Cradle Button -->
-                    <button class="addToCradleButton buttonBase buttonBlue">Add to Cradle</button>
+                    <button class="addToCradleButton buttonBase buttonBlue" onclick="addToCradle('Azuron')">
+                        Add to Cradle
+                    </button>
                 </div>
 
                 <!-- Greyed out 'Add ons' -->
@@ -275,28 +284,24 @@
                     <!-- Counter 'Button' -->
                     <div class="adoptCounterDiv cardYellow">
                         <!-- Minus -->
-                        <button class="buttonCounter" onclick="countMe('minus', 'adoptQuantKitsune')">
+                        <button class="buttonCounter" onclick="countMe('minus', 'adoptQuantYuki')">
                             <i class="fa-solid fa-minus"></i>
                         </button>
 
                         <!-- Dynamic counter input-->
                         <form class="adoptButtonForm">
-                            <input
-                                type="number"
-                                id="adoptQuantKitsune"
-                                name="adoptQuantKitsune"
-                                value="1"
-                                min="1"
-                                max="50" />
+                            <input type="number" id="adoptQuantYuki" name="adoptQuantYuki" value="1" min="1" max="50" />
                         </form>
 
                         <!-- Plus -->
-                        <button class="buttonCounter" onclick="countMe('plus', 'adoptQuantKitsune')">
+                        <button class="buttonCounter" onclick="countMe('plus', 'adoptQuantYuki')">
                             <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
                     <!-- Add to Cradle Button -->
-                    <button class="addToCradleButton buttonBase buttonBlue">Add to Cradle</button>
+                    <button class="addToCradleButton buttonBase buttonBlue" onclick="addToCradle('Yuki')">
+                        Add to Cradle
+                    </button>
                 </div>
 
                 <!-- Greyed out 'Add ons' -->
@@ -390,7 +395,9 @@
                         </button>
                     </div>
                     <!-- Add to Cradle Button -->
-                    <button class="addToCradleButton buttonBase buttonBlue">Add to Cradle</button>
+                    <button class="addToCradleButton buttonBase buttonBlue" onclick="addToCradle('Aurelia')">
+                        Add to Cradle
+                    </button>
                 </div>
 
                 <!-- Greyed out 'Add ons' -->
@@ -488,7 +495,9 @@
                         </button>
                     </div>
                     <!-- Add to Cradle Button -->
-                    <button class="addToCradleButton buttonBase buttonBlue">Add to Cradle</button>
+                    <button class="addToCradleButton buttonBase buttonBlue" onclick="addToCradle('Lumina')">
+                        Add to Cradle
+                    </button>
                 </div>
 
                 <!-- Greyed out 'Add ons' -->
@@ -585,7 +594,9 @@
                         </button>
                     </div>
                     <!-- Add to Cradle Button -->
-                    <button class="addToCradleButton buttonBase buttonBlue">Add to Cradle</button>
+                    <button class="addToCradleButton buttonBase buttonBlue" onclick="addToCradle('Starwind')">
+                        Add to Cradle
+                    </button>
                 </div>
 
                 <!-- Greyed out 'Add ons' -->
@@ -683,7 +694,9 @@
                         </button>
                     </div>
                     <!-- Add to Cradle Button -->
-                    <button class="addToCradleButton buttonBase buttonBlue">Add to Cradle</button>
+                    <button class="addToCradleButton buttonBase buttonBlue" onclick="addToCradle('Briar')">
+                        Add to Cradle
+                    </button>
                 </div>
 
                 <!-- Greyed out 'Add ons' -->
@@ -772,6 +785,68 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Cart Modal -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- Header/Tile -->
+                    <div class="modal-header cartHeader">
+                        <h1 class="modal-title" id="cartModalLabel">Shopping Cradle</h1>
+                    </div>
+
+                    <!-- The Cart body will be populated with JS if cart is populated -->
+                    <!-- If the cart is empty the below will show -->
+                    <div class="modal-body cartBody">
+                        <!-- Message to display when cart is empty -->
+                        <!-- <div class="cartMessage">
+                            <p>
+                                Oh no! It seems like your cradle is currently empty. <br />
+                                Please continue searching to find your perfect companion.
+                            </p>
+                        </div> -->
+
+                        <!-- This gets populated with javascript as soon as Items get added to the cart -->
+                        <div class="cardleContent">
+                            <div class="cradleHeader">
+                                <h4>Cradle</h4>
+                            </div>
+                            <hr noshade="true" size="1px" />
+                            <div class="cradleItems">
+                                <!-- Gets added in JS -->
+                            </div>
+                            <hr noshade="true" size="1px" />
+
+                            <div class="cradleFooter">
+                                <h4>Total</h4>
+                                <p class="total">R0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Modal Footer -->
+                    <div class="modal-footer cartFooter">
+                        <button
+                            type="button"
+                            class="btn btn-secondary buttonBase buttonCartModal"
+                            data-bs-dismiss="modal">
+                            Continue Searching
+                        </button>
+
+                        <!-- This 'button' needs to be hidden when the cart if empty -->
+                        <div class="hideFinishCart">
+                            <a
+                                type="button"
+                                class="btn btn-primary buttonBase buttonCartModal buttonBlue"
+                                id="buttonCartFinish"
+                                href="../index.html">
+                                Finish Adoption
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Bootstrap -->
         <script

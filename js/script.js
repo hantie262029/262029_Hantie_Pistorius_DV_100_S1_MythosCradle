@@ -128,8 +128,7 @@ countMe = (operator, petID) => {
     document.getElementById(petID).value = num;
 };
 
-// ## Disable 'add to cart' buttons once they have been clicked once
-// this might actually all still change based on the add to cart functionality
+// ## Disable 'add to cart' buttons once clicked
 let btns = document.querySelectorAll(".addToCradleButton");
 
 btns.forEach(disableBtn);
@@ -145,6 +144,10 @@ function disableBtn(btn) {
 }
 
 // ## Cart
+
+// List variable to store tasks
+// Get saved tasks OR assigns as empty
+
 // Hard-coding pet dictionary
 const products = [
     {
@@ -152,41 +155,141 @@ const products = [
         price: 2500,
         id: 1,
         petType: "Blue Dragon",
-        quantity: 1,
+        quantity: 0,
     },
     {
         name: "Yuki",
         price: 4500,
         id: 2,
         petType: "Kitsune",
-        quantity: 1,
+        quantity: 0,
     },
     {
         name: "Aurelia",
         price: 6500,
         id: 3,
         petType: "Griffin",
-        quantity: 1,
+        quantity: 0,
     },
     {
         name: "Lumina",
         price: 4000,
         id: 4,
         petType: "Water Wisp",
-        quantity: 1,
+        quantity: 0,
     },
     {
         name: "Starwind",
         price: 5000,
         id: 5,
         petType: "Pegasus",
-        quantity: 1,
+        quantity: 0,
     },
     {
         name: "Briar",
         price: 3500,
         id: 6,
         petType: "Forest Spirit",
-        quantity: 1,
+        quantity: 0,
     },
 ];
+
+// SESSION STORAGE
+let loadProducts = () => {
+    // Retrieve last saved username from storage
+    let storedProducts = sessionStorage.getItem("products");
+};
+
+// List variable to store cradle
+// Get saved cradle OR assigns as empty
+let cradle = JSON.parse(sessionStorage.getItem("cradle")) || [];
+
+// Access HTML elements from other parts of the document
+let cartBody = document.querySelector(".cartBody");
+let cartFooter = document.querySelector(".cartFooter");
+let cartItems = document.querySelector(".cradleItems");
+let finishAdoptBtn = document.querySelector(".hideFinishCart");
+let clearTasks = document.getElementById("clearTasks");
+/*
+
+DONE On 'Add to Cradle'-click, the const of products needs to be updated.
+DONE This is done by getting the quantity from the input counter and populating the cradle
+
+DONE Once a pet has been added to the cradle, update the products array/object and then populate the cradle array
+
+in the cart, calculate the price per item by price * quantity
+as well as the total cost of the cart
+
+there should be a functioning +/-counters, rather than retrofitting the existing ones, i'll rewrite them
+delete button
+
+session storage needs to be updated on changing cart
+
+if the cart length is 0, display a different message and overwrite '.hideFinishCart'
+
+*/
+
+// Add to Cradle Button click
+
+function addToCradle(petName) {
+    // Get the required quantity from form
+    let adoptQuant = document.getElementById("adoptQuant" + petName).value;
+
+    // Find the pet in the list of products that need to be updated
+    const quant = products.find((item) => item.name == petName);
+
+    // Update the existing Quantity in the products object
+    quant.quantity = parseInt(adoptQuant);
+
+    // Push to the cradle array and save
+    cradle.push(quant);
+    saveCradle();
+}
+
+// save the cradle
+let saveCradle = () => {
+    sessionStorage.setItem("cradle", JSON.stringify(cradle));
+};
+
+function viewCradle() {
+    // If the cart is empty,
+    if (cradle.length === 0) {
+        cartFooter.innerHTML = `
+                            <button
+                            type="button"
+                            class="btn btn-secondary buttonBase buttonCartModal"
+                            data-bs-dismiss="modal">
+                            Continue Searching
+                        </button>`;
+        cartBody.innerHTML = `
+                            <div class="cartMessage">
+                            <p>
+                                Oh no! It seems like your cradle is currently empty. <br />
+                                Please continue searching to find your perfect companion.
+                            </p>
+                        </div>`;
+    } else {
+        let cradleHTML = cradle.map(
+            (pet) => `
+                <div class="eachPetItem">
+                    <div class="petDescriptionCard">
+                        <h5> ${pet.name} - ${pet.petType}</h5>
+                    </div>
+
+                    <div class="petQuantityCard">
+                        <div class="petCounterCard">
+                            <button class="buttonCounter"><i class="fa-solid fa-minus"></i></button>
+                            <p>${pet.quantity}</p>
+                            <button class="buttonCounter"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="itemCost"><p>R ${(pet.quantity * pet.price).toFixed(2)}</p></div>
+                        <button class="buttonCounter" id="deleteBtn"><i class="deleteBtn fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>`,
+        );
+        cartItems.innerHTML = cradleHTML.join("");
+    }
+}
+
+// Add the event listener stuff
+window.addEventListener("DOMContentLoaded", loadProducts); // Important for session storage, manages the execution of the loadTasks function

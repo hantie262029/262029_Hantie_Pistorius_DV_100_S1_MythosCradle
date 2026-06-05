@@ -109,6 +109,11 @@ header {
 #cartButton:hover {
     color: #15d5f5;
 }
+#cartButton span {
+    font-size: 9pt;
+    font-weight: 200;
+    position: absolute;
+}
 
 /* filter search bar list */
 .result-box ul {
@@ -711,28 +716,51 @@ footer h4 {
     font-size: 42pt;
 }
 
-.cartMessage {
+.cartBody {
     /* Center-align content */
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    /* Background styling */
-    background-image: url(../assets/img/formBackground.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+.cartMessage {
     /* Font styling */
     font-family: "Metamorphous", sans-serif;
     font-size: 20pt;
     line-height: 2;
-    color: #ffffff;
+}
+
+.cardleContent {
+    /* background-color: #999; */
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    background-color: rgba(211, 211, 211, 0.25);
+    border-radius: 50px;
+    padding: 25px 50px;
+}
+.cardleContent h3,
+.cardleContent h4 {
+    font-family: "Metamorphous", sans-serif;
+}
+
+.cradleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 20px;
+}
+.cradleFooter {
+    display: flex;
+    flex: 2;
+    gap: 5%;
+    margin: 5px 20px;
+    justify-content: flex-end;
+    align-content: flex-end;
 }
 
 .cartHeader,
 .cartFooter {
-    /* margin: 15px; */
     padding: 20px 20px;
     background-color: #002d68;
     border: none;
@@ -751,4 +779,46 @@ footer h4 {
 #buttonCartFinish:hover {
     background-color: rgba(21, 213, 245, 0.75);
     color: #ffffff;
+}
+
+.cradleItems {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.eachPetItem {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #9f9f9f;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.petQuantityCard {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+}
+.cradleItems button {
+    color: #000000;
+}
+
+.petCounterCard {
+    display: flex;
+    border-radius: 15px;
+    gap: 5px;
+    background-color: #e9ad1c;
+    color: #ffffff;
+    padding: 0px 5px;
+}
+.petCounterCard button {
+    color: #ffffff;
+}
+.petCounterCard p {
+    padding-top: 10px;
+    inline-size: none;
+}
+.deleteBtn {
+    color: #002d68;
 }
