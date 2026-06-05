@@ -16,3 +16,8 @@
 
 - https://www.w3schools.com/howto/howto_js_filter_lists.asp
 - https://youtu.be/pdyFf1ugVfk
+
+### Shopping cart example
+
+- https://sudhanshuranjanblogs.hashnode.dev/making-a-shopping-cart
+- https://youtu.be/LtTlfxzxlhY

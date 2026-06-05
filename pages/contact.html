@@ -65,7 +65,13 @@
                             </div>
 
                             <!-- Cart Button that triggers the full screen cart modal -->
-                            <button class="searchItem cartButton">
+                            <!-- Button trigger modal -->
+                            <button
+                                class="searchItem cartButton"
+                                id="cartButton"
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
                                 <i class="fa-solid fa-basket-shopping"></i>
                             </button>
                         </div>
@@ -240,15 +246,20 @@
         </footer>
 
         <!-- Thank you message Modal -->
-        <div class="modal" id="formModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content cardBlue">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Thank you for contacting us!</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal fade" id="formModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modalThanks">
+                <div class="modal-content cardWhite modalContactContent">
+                    <div class="modal-headers">
+                        <h4 class="modal-title thanksTitle">Thank you for contacting us!</h4>
                     </div>
                     <div class="modal-body outputContainer">
                         <p>Modal body text goes here.</p>
+                    </div>
+                    <!-- Adding button to  -->
+                    <div class="modal-footer modalThanksFoot">
+                        <button type="button" class="btn btn-secondary buttonBase buttonBlue" data-bs-dismiss="modal">
+                            Close
+                        </button>
                     </div>
                 </div>
             </div>

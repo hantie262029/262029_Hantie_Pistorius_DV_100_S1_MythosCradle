@@ -1,4 +1,4 @@
-// Search bar
+// ## Search bar
 let filterKeywords = ["Azuron", "Yuki", "Aurelia", "Lumina", "Starwind", "Briar"];
 
 const resultsBox = document.querySelector(".result-box");
@@ -6,8 +6,6 @@ const inputBox = document.getElementById("search");
 
 // Get the current page to get the anchor link to work correctly
 const currentPage = window.location.href;
-
-//
 inputBox.onkeyup = function () {
     let result = [];
     let input = inputBox.value;
@@ -60,7 +58,7 @@ function selectInput(list) {
     document.getElementById("searchButtonDiv").innerHTML = output;
 }
 
-// Contact Form Time !!
+// ## Contact Form Time !!
 // Get Form data
 contactFormFunction = () => {
     let form = document.forms["filledForm"];
@@ -107,7 +105,7 @@ contactFormFunction = () => {
     }
 };
 
-// Counter
+// ## Counters
 // Used for add and subtract buttons on adopt page and in cart
 countMe = (operator, petID) => {
     // Extract element from HTML
@@ -130,7 +128,7 @@ countMe = (operator, petID) => {
     document.getElementById(petID).value = num;
 };
 
-// Disable 'add to cart' buttons once they have been clicked once
+// ## Disable 'add to cart' buttons once they have been clicked once
 // this might actually all still change based on the add to cart functionality
 let btns = document.querySelectorAll(".addToCradleButton");
 
@@ -145,3 +143,50 @@ function disableBtn(btn) {
         btn.textContent = "Added to cart";
     });
 }
+
+// ## Cart
+// Hard-coding pet dictionary
+const products = [
+    {
+        name: "Azuron",
+        price: 2500,
+        id: 1,
+        petType: "Blue Dragon",
+        quantity: 1,
+    },
+    {
+        name: "Yuki",
+        price: 4500,
+        id: 2,
+        petType: "Kitsune",
+        quantity: 1,
+    },
+    {
+        name: "Aurelia",
+        price: 6500,
+        id: 3,
+        petType: "Griffin",
+        quantity: 1,
+    },
+    {
+        name: "Lumina",
+        price: 4000,
+        id: 4,
+        petType: "Water Wisp",
+        quantity: 1,
+    },
+    {
+        name: "Starwind",
+        price: 5000,
+        id: 5,
+        petType: "Pegasus",
+        quantity: 1,
+    },
+    {
+        name: "Briar",
+        price: 3500,
+        id: 6,
+        petType: "Forest Spirit",
+        quantity: 1,
+    },
+];

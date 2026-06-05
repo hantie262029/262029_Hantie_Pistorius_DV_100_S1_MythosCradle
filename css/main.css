@@ -59,6 +59,7 @@ header {
     width: 280px;
     display: block;
 }
+
 .navLinks {
     display: flex;
     gap: 20px;
@@ -99,9 +100,14 @@ header {
 .bar {
     border-right: solid #4d4d4d 2px;
 }
+
 .search button {
     color: #4d4d4d;
     padding: 0px 10px;
+}
+
+#cartButton:hover {
+    color: #15d5f5;
 }
 
 /* filter search bar list */
@@ -406,8 +412,8 @@ Contact Page
 }
 
 /* Modal / Pop up message */
-/* Modal / popup styling needs to happen in .modal-dialog */
-.modal-dialog {
+.modalThanks,
+.modalThanksFoot {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -418,10 +424,10 @@ Contact Page
     color: #ffffff;
 }
 
-.modal-content {
+.modalContactContent {
     box-shadow: 0 10px 14px rgba(77, 77, 77, 0.825);
     border-radius: 35px;
-    padding: 20px 30px;
+    padding: 20px 0px;
     text-align: center;
     border: none;
 }
@@ -695,4 +701,54 @@ footer h4 {
 
 .footerBot a:hover {
     color: #15d5f5;
+}
+
+/* Cart and cart modal styling */
+#cartModalLabel {
+    display: block;
+    margin: auto;
+    color: #e9ad1c;
+    font-size: 42pt;
+}
+
+.cartMessage {
+    /* Center-align content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Background styling */
+    background-image: url(../assets/img/formBackground.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Font styling */
+    font-family: "Metamorphous", sans-serif;
+    font-size: 20pt;
+    line-height: 2;
+    color: #ffffff;
+}
+
+.cartHeader,
+.cartFooter {
+    /* margin: 15px; */
+    padding: 20px 20px;
+    background-color: #002d68;
+    border: none;
+}
+
+.buttonCartModal {
+    padding: 15px 20px;
+    font-weight: 420;
+}
+
+.buttonCartModal:hover {
+    box-shadow: 0 0 7px rgba(248, 231, 190, 0.9);
+}
+
+/* Overriding bootstrap btn-primary styling */
+#buttonCartFinish:hover {
+    background-color: rgba(21, 213, 245, 0.75);
+    color: #ffffff;
 }
